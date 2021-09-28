@@ -1,10 +1,10 @@
 import 'package:docoline/SizeConfig.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../AppTheme.dart';
 import '../SizeConfig.dart';
+import 'package:docoline/screens/Profile.dart';
 import 'RegistrationSreen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -177,7 +177,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                   style: ButtonStyle(
                                       padding: MaterialStateProperty.all(
                                           Spacing.xy(16, 0))),
-                                  onPressed: () { },
+                                  onPressed: () {
+                                    Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) =>ProfileScreen()));
+                      },
                                   child: Text("LOGIN",
                                       style: AppTheme.getTextStyle(
                                           themeData.textTheme.button,
