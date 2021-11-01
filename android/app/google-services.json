@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436069345398",
+    "project_id": "docoline-8fcaf",
+    "storage_bucket": "docoline-8fcaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436069345398:android:07003170600c0db46a9757",
+        "android_client_info": {
+          "package_name": "com.example.docoline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436069345398-og4q170c1nbgeq0ccs0eonsun5efktm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsdteYCbFmavNQ0VW-svTfdH3iegbSprw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436069345398-og4q170c1nbgeq0ccs0eonsun5efktm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

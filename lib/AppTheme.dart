@@ -1,12 +1,12 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class AppTheme {
- 
   static CustomAppTheme getCustomAppTheme() {
-      return CustomAppTheme.lightCustomAppTheme;
+    return CustomAppTheme.lightCustomAppTheme;
   }
+
   static FontWeight _getFontWeight(int weight) {
     switch (weight) {
       case 100:
@@ -34,7 +34,7 @@ class AppTheme {
   static TextStyle getTextStyle(TextStyle? textStyle,
       {int fontWeight = 500,
       bool muted = false,
-        bool xMuted =false,
+      bool xMuted = false,
       double letterSpacing = 0.15,
       Color? color,
       TextDecoration decoration = TextDecoration.none,
@@ -44,12 +44,15 @@ class AppTheme {
     double? finalFontSize = fontSize != null ? fontSize : textStyle!.fontSize;
 
     Color? finalColor;
-    if(color==null){
-      finalColor= xMuted ? textStyle!.color!.withAlpha(160) : (muted ? textStyle!.color!.withAlpha(200) : textStyle!.color);
-    }else{
-      finalColor = xMuted ? color.withAlpha(160) : ( muted ? color.withAlpha(200) : color);
+    if (color == null) {
+      finalColor = xMuted
+          ? textStyle!.color!.withAlpha(160)
+          : (muted ? textStyle!.color!.withAlpha(200) : textStyle!.color);
+    } else {
+      finalColor = xMuted
+          ? color.withAlpha(160)
+          : (muted ? color.withAlpha(200) : color);
     }
-
 
     return GoogleFonts.ibmPlexSans(
         fontSize: finalFontSize,
@@ -90,7 +93,6 @@ class AppTheme {
     overline: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 11, color: Color(0xff495057))),
   );
-  
 
   //Text Themes
   static final TextTheme lightTextTheme = TextTheme(
@@ -121,13 +123,13 @@ class AppTheme {
     overline: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 11, color: Color(0xff4a4c4f))),
   );
-  
+
   //Color Themes
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    primaryColor: Color(0xff3d63ff),
+    primaryColor: Color(0xee2aaaaa),
     canvasColor: Colors.transparent,
-    backgroundColor:  Color(0xfff6f6f6),
+    backgroundColor: Color(0xfff6f6f6),
     scaffoldBackgroundColor: Color(0xfff6f6f6),
     appBarTheme: AppBarTheme(
       textTheme: lightAppBarTextTheme,
@@ -227,7 +229,6 @@ class AppTheme {
       ),
     ),
   );
-  
 }
 
 class CustomAppTheme {
@@ -247,14 +248,24 @@ class CustomAppTheme {
       onSuccess,
       onError;
 
-  final Color groceryBg1,groceryBg2;
-  final Color groceryPrimary,groceryOnPrimary;
+  final Color groceryBg1, groceryBg2;
+  final Color groceryPrimary, groceryOnPrimary;
 
-  final Color medicarePrimary, medicareOnPrimary ;
+  final Color medicarePrimary, medicareOnPrimary;
 
-  final Color cookifyPrimary,cookifyOnPrimary;
+  final Color cookifyPrimary, cookifyOnPrimary;
 
-  final Color lightBlack,red,green,yellow,orange,blue,purple,pink,brown,violet,indigo;
+  final Color lightBlack,
+      red,
+      green,
+      yellow,
+      orange,
+      blue,
+      purple,
+      pink,
+      brown,
+      violet,
+      indigo;
 
   CustomAppTheme({
     this.bgLayer1 = const Color(0xffffffff),
@@ -277,18 +288,16 @@ class CustomAppTheme {
 
     this.groceryPrimary = const Color(0xff10bb6b),
     this.groceryOnPrimary = const Color(0xffffffff),
-
     this.groceryBg1 = const Color(0xfffbfbfb),
     this.groceryBg2 = const Color(0xfff5f5f5),
 
-
     //Cookify
-    this.cookifyPrimary= const Color(0xffdf7463),
-    this.cookifyOnPrimary= const Color(0xffffffff),
+    this.cookifyPrimary = const Color(0xffdf7463),
+    this.cookifyOnPrimary = const Color(0xffffffff),
 
     //Color
     this.lightBlack = const Color(0xffa7a7a7),
-    this.red =const Color(0xffFF0000),
+    this.red = const Color(0xffFF0000),
     this.green = const Color(0xff008000),
     this.yellow = const Color(0xfffff44f),
     this.orange = const Color(0xffFFA500),
@@ -296,20 +305,17 @@ class CustomAppTheme {
     this.purple = const Color(0xff800080),
     this.pink = const Color(0xffFFC0CB),
     this.brown = const Color(0xffA52A2A),
-    this.indigo= const Color(0xff4B0082),
+    this.indigo = const Color(0xff4B0082),
     this.violet = const Color(0xff9400D3),
     //Medicare Color Scheme
-    this.medicarePrimary=const Color(0xff6d65df),
-    this.medicareOnPrimary=const Color(0xffffffff),
-
+    this.medicarePrimary = const Color(0xff6d65df),
+    this.medicareOnPrimary = const Color(0xffffffff),
   });
   static final CustomAppTheme lightCustomAppTheme = CustomAppTheme(
     bgLayer1: Color(0xffffffff),
     bgLayer2: Color(0xfff9f9f9),
     bgLayer3: Color(0xffe8ecf4),
     bgLayer4: Color(0xffdcdee3),
-
-
     disabledColor: Color(0xff636363),
     onDisabled: Color(0xffffffff),
     colorInfo: Color(0xffff784b),
@@ -320,7 +326,8 @@ class CustomAppTheme {
     onSuccess: Color(0xffffffff),
     onWarning: Color(0xffffffff),
     colorError: Color(0xfff0323c),
-    onError: Color(0xffffffff),);
+    onError: Color(0xffffffff),
+  );
 }
 
 class NavigationBarTheme {
