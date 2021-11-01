@@ -4,15 +4,15 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 import '../../AppTheme.dart';
 import '../SizeConfig.dart';
-import 'package:docoline/screens/Profile.dart';
-import 'RegistrationSreen.dart';
+import 'package:docoline/screens/UserProfile.dart';
+import 'RegistrationSreenUser.dart';
 
-class LoginScreen extends StatefulWidget {
+class UserLoginScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _UserLoginScreenState createState() => _UserLoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _UserLoginScreenState extends State<UserLoginScreen> {
   bool? _passwordVisible = false, _check = false;
   late ThemeData themeData;
   late TextEditingController controllermobile ; 
@@ -50,23 +50,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: EdgeInsets.only(top: 16, bottom: 16),
                   child: Column(
                     children: <Widget>[
-                      Container(
-                        padding: EdgeInsets.fromLTRB(100, 0, 100, 100),
-                        margin: EdgeInsets.only(bottom: MySize.size16!),
-                        width: MySize.getScaledSizeHeight(140),
-                        height: MySize.getScaledSizeHeight(140),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          // image: DecorationImage(
-                          //     image: AssetImage(
-                          //         "./assets/images/WoMentr-Logo.png"),
-                          //     fit: BoxFit.fill),
-                        ),
-                      ),
+                      Image(
+          image: AssetImage('./assets/images/DOCOLINE-logo.png'),
+          height: MySize.size180,
+        ),
                       Container(
                         margin: EdgeInsets.only(bottom: 24, top: 0),
                         child: Text(
-                          "LOGIN",
+                          "USER LOGIN",
                           style: AppTheme.getTextStyle(
                               themeData.textTheme.headline6,
                               fontWeight: 600),
@@ -85,13 +76,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                   color: themeData.colorScheme.primaryVariant,
                                   fontWeight: 500),
                               decoration: InputDecoration(
-                                hintText: "Mobile number",
+                                hintText: "Email",
                                 hintStyle: AppTheme.getTextStyle(
                                     themeData.textTheme.subtitle2,
                                     letterSpacing: 0.1,
                                     color: themeData.colorScheme.primaryVariant,
                                     fontWeight: 500),
-                                prefixIcon: Icon(MdiIcons.phone),
+                                prefixIcon: Icon(MdiIcons.email),
                               ),
                             ),
                             Container(
@@ -125,14 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 obscureText: _passwordVisible!,
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.only(top: 16),
-                              alignment: Alignment.centerRight,
-                              child: Text("Forgot Password?",
-                                  style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText2,
-                                      fontWeight: 500)),
-                            ),
+                            
                             Container(
                               alignment: Alignment.centerLeft,
                               child: Container(
@@ -179,7 +163,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           Spacing.xy(16, 0))),
                                   onPressed: () {
                                     Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) =>ProfileScreen()));
+                      MaterialPageRoute(builder: (context) =>UserProfileScreen()));
                       },
                                   child: Text("LOGIN",
                                       style: AppTheme.getTextStyle(
@@ -199,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
               GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SignUpScreen()));
+                      MaterialPageRoute(builder: (context) => SignUpScreenUser()));
                 },
                 child: Container(
                   margin: EdgeInsets.only(top: 16),

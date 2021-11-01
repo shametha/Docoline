@@ -27,6 +27,10 @@ dependencies:
   google_fonts:
   material_design_icons_flutter: ^5.0.5955-rc.1
   url_launcher: ^6.0.9
+  flutter_spinkit: ^5.1.0
+  firebase_core:
+  cloud_firestore:
+ 
 
 
   # The following adds the Cupertino Icons font to your application.
