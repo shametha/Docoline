@@ -1,6 +1,6 @@
 # Docoline
 
-Docoline is a virtual Doctor appointment booking application, that has been developed to override the problems of booking an appointment with a doctor specially prevailing in the pandemic situation. This software is supported to eliminate the hardships faced by this existing manual booking system. No formal knowledge is needed for the user to use this system. Thus by this all it proves it is user-friendly. 
+Docoline is a virtual Doctor appointment booking application, that has been developed to override the problems of booking an appointment with a doctor specially prevailing in the pandemic situation. This software is supported to eliminate the hardships faced by this existing manual booking system. No formal knowledge is needed for the user to use this system. Thus by this all it proves it is user-friendly.This application uses Firebase as backend.
 
 <br><br> **Login Screens** <br><br>
 ![ChooseLogin](https://user-images.githubusercontent.com/59509542/146676451-acc62306-9182-45fe-826a-d0c11e023ab8.png)
